@@ -1,4 +1,4 @@
-public class Pokemon
+public class Pokemon implements Comparator 
 {
     private String name;
     private int HP;
@@ -27,6 +27,36 @@ public class Pokemon
     public void attack(Pokemon p)
     {
         
+    }    
+    public Boolean equals(Pokemon p)
+    {
+        if(HP == p.getHP() && getClass() == p.getClass())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-        
+    public String toString()
+    {
+        return getClass().toString();
+    }
+    public int compare(Object o)
+    {
+        Pokemon p2 = (Pokemon) o;
+        if(HP < p2.getHP())
+        {
+            return -1;
+        }
+        else if (HP > p2.getHP())
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }

@@ -63,5 +63,13 @@ public class PokemonBattleArena
         battle(ch, b);
         battle(ch, sq);
         battle(b, sq);
+
+        CharmandersNew ch2 = new CharmandersNew("Charo");
+        CharmandersNew ch3 = new CharmandersNew("Chara");
+        ch2.attack(ch3);
+        ch3.attack(ch2);
+        System.out.println(ch2.equals(ch3));
+        System.out.println(ch3);
+        
     }
 }

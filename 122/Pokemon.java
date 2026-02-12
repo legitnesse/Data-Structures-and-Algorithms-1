@@ -41,7 +41,7 @@ public class Pokemon implements Comparator
     }
     public String toString()
     {
-        return getClass().toString();
+        return getClass().toString().substring(6);
     }
     public int compare(Object o)
     {

@@ -2,7 +2,7 @@ public class TrainTester
 {
     public static void main(String[] args) 
     {
-        Train t = new Train();
+        ArrayListTrain t = new ArrayListTrain();
         t.addCar("A");
         System.out.println(t.getCurrentNumberOfCars());
         t.printTrain();
@@ -26,7 +26,7 @@ public class TrainTester
         System.out.println(t.countCarType("E"));
         System.out.println(t.checkForCar("C"));
         System.out.println(t.checkForCar("F"));
-        Train b = t.cloneTrain();
+        ArrayListTrain b = t.cloneTrain();
         b.replaceCar("F", 5);
         t.printTrain();
         b.printTrain();

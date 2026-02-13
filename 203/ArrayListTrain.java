@@ -1,9 +1,9 @@
-public class Train 
+public class ArrayListTrain 
 {
     public String[] cars;
     public int currentNumberOfCars;
     
-    public Train()
+    public ArrayListTrain()
     {
         cars = new String[5];
         currentNumberOfCars = 0;
@@ -121,9 +121,9 @@ public class Train
         }
         return numberOfCarType;
     }
-    public Train cloneTrain()
+    public ArrayListTrain cloneTrain()
     {
-        Train clonedTrain = new Train();
+        ArrayListTrain clonedTrain = new ArrayListTrain();
         String[] clonedCars = new String[cars.length];
         for(int i = 0; i < currentNumberOfCars; i++)
         {

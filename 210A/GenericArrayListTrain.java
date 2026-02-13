@@ -1,9 +1,9 @@
-public class GenericTrain<T>
+public class GenericArrayListTrain<T>
 {
     private Object[] cars;
     private int currentNumberOfCars;
 
-    public GenericTrain()
+    public GenericArrayListTrain()
     {
         cars = new Object[5];
         currentNumberOfCars = 0;
@@ -78,13 +78,13 @@ public class GenericTrain<T>
             return;
         }
     }
-    public void replaceCar(String inputCarString, int newCarIndex)
+    public void replaceCar(T inputCarObject, int newCarIndex)
     {
-        cars[newCarIndex] = inputCarString;
+        cars[newCarIndex] = inputCarObject;
     }
-    public Object getCar(int carIndex)
+    public T getCar(int carIndex)
     {
-        return cars[carIndex];
+        return (T) cars[carIndex];
     }
     public Object[] getCars()
     {
@@ -92,35 +92,35 @@ public class GenericTrain<T>
     }
     public void resetTrain()
     {
-        cars = new String[5];
+        cars = new Object[5];
         currentNumberOfCars = 0;
     }
-    public Boolean checkForCar(String inputCarString)
+    public Boolean checkForCar(T inputCarObject)
     {
         for(int i = 0; i < currentNumberOfCars; i++)
         {
-            if(cars[i].equals(inputCarString))
+            if(cars[i].equals(inputCarObject))
             {
                 return true;
             }
         }
         return false;
     }
-    public int countCarType(String inputCarString)
+    public int countCarType(T inputCarObject)
     {
         int numberOfCarType = 0;
         for(int i = 0; i < currentNumberOfCars; i++)
         {
-            if(cars[i].equals(inputCarString))
+            if(cars[i].equals(inputCarObject))
             {
                 numberOfCarType++;
             }
         }
         return numberOfCarType;
     }
-    public GenericTrain<T> cloneTrain()
+    public GenericArrayListTrain<T> cloneTrain()
     {
-        GenericTrain<T> clonedTrain = new GenericTrain<>();
+        GenericArrayListTrain<T> clonedTrain = new GenericArrayListTrain<>();
         Object[] clonedCars = new Object[cars.length];
         for(int i = 0; i < currentNumberOfCars; i++)
         {

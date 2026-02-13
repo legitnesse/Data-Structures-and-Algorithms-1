@@ -1,15 +1,15 @@
-public class GenericTrainTester 
+public class GenericArrayListTrainTester 
 {
     public static void main(String[] args)
     {
-        GenericTrain<String> stringTrain = new GenericTrain<>();
+        GenericArrayListTrain<String> stringTrain = new GenericArrayListTrain<>();
         stringTrain.addCar("A");
         stringTrain.addCar("B");
         stringTrain.addCar("C");
         stringTrain.addCar("D");
         stringTrain.addCar("E");
         stringTrain.addCar("F");
-        GenericTrain<Double> doubleTrain = new GenericTrain<>();
+        GenericArrayListTrain<Double> doubleTrain = new GenericArrayListTrain<>();
         doubleTrain.addCar(1.2);
         doubleTrain.addCar(2.3);
         doubleTrain.addCar(3.4);
